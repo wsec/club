@@ -30,16 +30,16 @@ alias ls="ls --color=auto"
 alias grep="grep --color"
 alias egrep="egrep --color=auto"
 alias fgrep="fgrep --color=auto"
-# don'"'"'t put duplicate lines or lines starting with space in the history.
+# don't put duplicate lines or lines starting with space in the history.
 # See bash(1) for more options
 HISTCONTROL=ignoreboth
-# append to the history file, don'"'"'t overwrite it
+# append to the history file, don't overwrite it
 shopt -s histappend
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
 HISTSIZE=100
 HISTFILESIZE=2000
 alias npp="/cygdrive/c/Program\ Files\ \(x86\)/npp/notepad++.exe"
-export PS1='"'"'\[\e]0;\w\a\]\n\[\e[32m\]\u@\h \[\e[33m\]\w$(EXIT="$?"; [ "$EXIT" -ne "0" ] && echo "\[\e[31;1m\] | $EXIT")\[\e[0m\]\n\$ '"'"'
+export PS1='\[\e]0;\w\a\]\n\[\e[32m\]\u@\h \[\e[33m\]\w$(EXIT="$?"; [ "$EXIT" -ne "0" ] && echo "\[\e[31;1m\] | $EXIT")\[\e[0m\]\n\$ '
 #<<<<end added by bad-cygwin.sh
 EOF
 
