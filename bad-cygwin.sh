@@ -1,8 +1,9 @@
 #!/bin/bash 
 
 #This script will make cygwin on the school computers less frustrating to use. 
-#WARNING: this script is very inflexible... 
-#version 0.2
+#Usage: ./bad-cygwin.sh [NEW_HOME_DIR]
+#WARNING: this script was kinda inflexible... 
+#version 0.3
 #written by Jennings Zhang, May 2017  
 
 #Features overview: 
@@ -13,18 +14,31 @@
 #Repeated commands are not repeated in your history.
 #If a job exits with a non-zero return status, the return status is displayed at the end of the first line of the prompt in red.
 
-
-date
+TODAY=$(date "+%m/%d/%Y")
+echo "Today is $TODAY"
 echo "This script will make cygwin on a school computer less frustrating to use. Written by Jennings Zhang, May 2017."
+
+if [[ "$1" = *-h* ]]; then
+  
+  echo "Usage: ./bad-cygwin.sh [NEW_HOME_DIR]"
+  exit 0
+fi
+
 
 cd ~
 
 cp -v .bash_profile .bash_profile.backup
 
 new_home="/cygdrive/h/cygwin_home"
+new_home_esc="\/cygdrive\/h\/cygwin_home\/"
+
+if [ -n "$1" ]; then
+  $new_home=$1
+  new_home_esc=$(echo $new_home | sed 's/\//\\\//g')
+fi
 
 mkdir $new_home
-sed -i "1iexport HOME=\/cygdrive\/h\/cygwin_home\/\ncd ~" .bash_profile
+sed -i "1iexport HOME=$new_home_esc\ncd ~" .bash_profile
 #regex=""
 #new_home="export HOME=\/cygdrive\/c\/cygwin_home\/\ncd ~"
 #sed  "/$regex/ { N; s/$regex\n/$new_home\n&/ }" .bash_profile > buffer && mv -f buffer .bash_profile
@@ -34,7 +48,7 @@ cp -vi .bashrc .inputrc .profile $new_home
 cd $new_home
 
 cat >> .bashrc << EOF
-#>>>>begin added by bad-cygwin.sh on $(date "+%m/%d/%Y")
+#>>>>BEGIN added by bad-cygwin.sh on $TODAY
 alias ls="ls --color=auto"
 alias grep="grep --color"
 alias egrep="egrep --color=auto"
@@ -58,14 +72,14 @@ createc() {
 #include <stdlib.h>
 #include <string.h>
 
-int main(int argc, char *argv[]){
+int main(int argc, char *argv[]) {
 
 	printf("Hello world!");
 	return 0;
 }
 ENDOFHELLOWORLD
 }
-#<<<<end added by bad-cygwin.sh
+#<<<<END added by bad-cygwin.sh
 EOF
 
 cat >> .virc << EOF
