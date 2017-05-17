@@ -2,8 +2,17 @@
 
 #This script will make cygwin on the school computers less frustrating to use. 
 #WARNING: this script is very inflexible... 
-#version 0.1
-#written by Jennings Zhang, May 2017 #aiden 
+#version 0.2
+#written by Jennings Zhang, May 2017  
+
+#Features overview: 
+#launch notepad++ from cygwin simply by typing "npp &".
+#instantly create a new hello world C file by typing "createc".
+#"ls" is colorful.
+#your home directory (the default directory cygwin opens in) will be changed to H:\cygwin_home. This folder is accessible with Windows file explorer, making your life much easier. 
+#Repeated commands are not repeated in your history.
+#If a job exits with a non-zero return status, the return status is displayed at the end of the first line of the prompt in red.
+
 
 date
 echo "This script will make cygwin on a school computer less frustrating to use. Written by Jennings Zhang, May 2017."
