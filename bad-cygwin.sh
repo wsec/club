@@ -21,7 +21,7 @@ sed -i "1iexport HOME=\/cygdrive\/h\/cygwin_home\/\ncd ~" .bash_profile
 #sed  "/$regex/ { N; s/$regex\n/$new_home\n&/ }" .bash_profile > buffer && mv -f buffer .bash_profile
 echo "Your new home (~) directory is: $new_home. Cygwin will now open in this directory by default." 
 
-cp -v .bashrc .inputrc .profile .bash_logout $new_home
+cp -v .bashrc .inputrc .profile $new_home
 cd $new_home
 
 cat >> .bashrc << EOF
@@ -43,7 +43,7 @@ export PS1='\[\e]0;\w\a\]\n\[\e[32m\]\u@\h \[\e[33m\]\w$(EXIT="$?"; [ "$EXIT" -n
 #<<<<end added by bad-cygwin.sh
 EOF
 
-cat >> .virc << EOF '
+cat >> .virc << EOF
 set backspace=indent,eol,start
 set number
 syntax on
