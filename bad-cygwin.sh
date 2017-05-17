@@ -75,3 +75,4 @@ echo 'Tip: "&" will make a job run in the background. If you launch notepad++ wi
 
 echo "Done! Please restart cygwin to fully apply the changes. "
 echo "If you want to revert these changes, delete the cygwin_home folder, then: cd /home/\$USER && mv .bash_profile.backup .bash_profile"
+echo "DFTBA"
