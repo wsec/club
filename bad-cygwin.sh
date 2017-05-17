@@ -21,7 +21,7 @@ sed -i "1iexport HOME=\/cygdrive\/h\/cygwin_home\/\ncd ~" .bash_profile
 #sed  "/$regex/ { N; s/$regex\n/$new_home\n&/ }" .bash_profile > buffer && mv -f buffer .bash_profile
 echo "Your new home (~) directory is: $new_home. Cygwin will now open in this directory by default." 
 
-cp -v .bashrc .inputrc .profile $new_home
+cp -vi .bashrc .inputrc .profile $new_home
 cd $new_home
 
 cat >> .bashrc << EOF
@@ -40,6 +40,22 @@ HISTSIZE=100
 HISTFILESIZE=2000
 alias npp="/cygdrive/c/Program\ Files\ \(x86\)/npp/notepad++.exe"
 export PS1='\[\e]0;\w\a\]\n\[\e[32m\]\u@\h \[\e[33m\]\w$(EXIT="$?"; [ "$EXIT" -ne "0" ] && echo "\[\e[31;1m\] | $EXIT")\[\e[0m\]\n\$ '
+
+createc() {
+  local file_name=hello_world.c
+  [ -n "$1" ] && file_name=$1
+  cat > $file_name << ENDOFHELLOWORLD
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int main(int argc, char *argv[]){
+
+	printf("Hello world!");
+	return 0;
+}
+ENDOFHELLOWORLD
+}
 #<<<<end added by bad-cygwin.sh
 EOF
 
@@ -52,10 +68,10 @@ hi CursorLine term=bold cterm=bold
 EOF
 
 echo "Some lines were added to the ~/.bashrc configuration file."
-echo 'You can launch notepad++ directly from cygqin by typing "npp [FILENAME]".'
-echo "Tip: appending '&' to a command runs the command in the background."
-echo "So, 'npp &' will launch notepad++ without keeping your shell busy, so you can keep using your shell and notepad++ at the same time."
-echo "A .virc file was also created."
-echo "Done! Please restart cygwin to fully apply the changes. "
-echo "If you want to revert these changes, delete the cygwin_home folder, and also remove the first two lines of /users/\$USER/.bash_profile."
+echo "I've made some quality of life changes."
+echo 'createc [FILENAME] will write "Hello World" out to the specified file.'
+echo 'npp [FILENAME] & will launch notepad++ directly from cygwin.'
+echo 'Tip: "&" will make a job run in the background. If you launch notepad++ without the "&", then it will keep your shell busy."
 
+echo "Done! Please restart cygwin to fully apply the changes. "
+echo "If you want to revert these changes, delete the cygwin_home folder, then: cd /home/\$USER && mv .bash_profile.backup .bash_profile"
