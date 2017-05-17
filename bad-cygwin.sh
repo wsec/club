@@ -24,7 +24,7 @@ echo "Your new home (~) directory is: $new_home. Cygwin will now open in this di
 cp -v .bashrc .inputrc .profile .bash_logout $new_home
 cd $new_home
 
-echo '
+cat >> .bashrc << EOF
 #>>>>begin added by bad-cygwin.sh on $(date "+%m/%d/%Y")
 alias ls="ls --color=auto"
 alias grep="grep --color"
@@ -41,15 +41,15 @@ HISTFILESIZE=2000
 alias npp="/cygdrive/c/Program\ Files\ \(x86\)/npp/notepad++.exe"
 export PS1='"'"'\[\e]0;\w\a\]\n\[\e[32m\]\u@\h \[\e[33m\]\w$(EXIT="$?"; [ "$EXIT" -ne "0" ] && echo "\[\e[31;1m\] | $EXIT")\[\e[0m\]\n\$ '"'"'
 #<<<<end added by bad-cygwin.sh
-' >> .bashrc
+EOF
 
-echo '
+cat >> .virc << EOF '
 set backspace=indent,eol,start
 set number
 syntax on
 set cursorline
 hi CursorLine term=bold cterm=bold 
-' >> .virc
+EOF
 
 echo "Some lines were added to the ~/.bashrc configuration file."
 echo 'You can launch notepad++ directly from cygqin by typing "npp [FILENAME]".'
