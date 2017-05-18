@@ -94,7 +94,7 @@ echo "Some lines were added to the ~/.bashrc configuration file."
 echo "I've made some quality of life changes."
 echo 'createc [FILENAME] will write "Hello World" out to the specified file.'
 echo 'npp [FILENAME] & will launch notepad++ directly from cygwin.'
-echo 'Tip: "&" will make a job run in the background. If you launch notepad++ without the "&", then it will keep your shell busy."
+echo 'Tip: "&" will make a job run in the background. If you launch notepad++ without the "&", then it will keep your shell busy.'
 
 echo "Done! Please restart cygwin to fully apply the changes. "
 echo "If you want to revert these changes, delete the cygwin_home folder, then: cd /home/\$USER && mv .bash_profile.backup .bash_profile"
