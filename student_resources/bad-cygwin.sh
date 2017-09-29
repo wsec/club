@@ -1,10 +1,10 @@
 #!/bin/bash 
 
-#This script will make cygwin on the school computers less frustrating to use. 
-#Usage: ./bad-cygwin.sh [NEW_HOME_DIR]
-#WARNING: this script was kinda inflexible... 
-#version 0.3
 #written by Jennings Zhang, May 2017  
+#This script will make the cygwin linux terminal emulation program on school computers less frustrating to use. 
+#Usage: ./bad-cygwin.sh [NEW_HOME_DIR]
+#WARNING: this script was kinda inflexible... This software is provided AS IS, don't blame me for any catastrophies or vomitting.
+#version 0.3
 
 #Features overview: 
 #launch notepad++ from cygwin simply by typing "npp &".
