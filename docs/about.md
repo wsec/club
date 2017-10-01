@@ -16,4 +16,4 @@ We meet **every Tuesday after-school from 14:40 to 15:30**, with the occasional 
 
 [twlinux86@gmail.com](mailto:twlinux86@gmail.com)
 
-This site was built with the [Jekyll](https://jekyllrb.com/) theme [Beautiful Jekyll](https://github.com/daattali/beautiful-jekyll#readme). *Beautiful Jekyll* is licensed under the MIT license.
+This site was built with the [Jekyll](https://jekyllrb.com/) theme *[Beautiful Jekyll](https://github.com/daattali/beautiful-jekyll#readme)*. *Beautiful Jekyll* is licensed under the MIT license.
