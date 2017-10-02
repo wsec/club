@@ -26,7 +26,17 @@ These distributions are light enough that a working environment can be fit into 
 
 Installation will take around half an hour, so this would be a great time to learn a little bit about Linux and open source software. 
 
-Ubuntu is an easy distro to start with, though I don't like it because it's bloated and clumsy. **Elementary OS** is a distro based on Ubuntu. Its desktop environment, Pantheon, is inspired by MacOS. Once you boot in you might see the similarities. As I've mentioned, every Linux distro is unique with their strengths and weaknesses. Elementary is based on Ubuntu, which has the largest market share, meaning it is supported well. It has a decent user interface with relatively few customization options.  
+Ubuntu is an easy distro to start with, though I don't like it because it's bloated and clumsy. **Elementary OS** is a distro based on Ubuntu. Its desktop environment, Pantheon, is inspired by MacOS. Once you boot in you might see the similarities. As I've mentioned, every Linux distro is unique with their strengths and weaknesses. Elementary is based on Ubuntu, which has the largest market share, meaning it is supported well. It has a decent user interface with relatively few customization options.
+
+Use **Gparted** to partition the hard drive. 
+
+The MBR partition scheme only recognizes four primary paritions. We can work around this limitation by creating **logical partitions**.
+
+1. Delete the unused NTFS partition at the end of the device. 
+2. Resize the Windows C:\\ partition so that there is **60 GB** following space.
+3. Create an **extended partition** in the free space.
+4. Create a **logical partition** of the **ext4** format with **6 GB** of following space.
+5. Format the last 6 GB as the **linux-swap** partition. 
 
 ## Boot process
 
