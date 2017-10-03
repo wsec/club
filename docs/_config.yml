@@ -26,6 +26,7 @@ navbar-links:
     - GNU free software: "https://www.gnu.org/philosophy/philosophy.html"
     - Windows Subsystem: "https://msdn.microsoft.com/en-us/commandline/wsl/install_guide"
   Achievements: "achievements"
+  LINUX commands: "https://github.com/jennydaman/twlinux/wiki/Basic-UNIX-and-bash-commands"
 
 # Image to show in the navigation bar - image must be a square (width = height)
 # Remove this parameter if you don't want an image in the navbar
