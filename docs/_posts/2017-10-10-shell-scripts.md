@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Shell Scripting
-subtitle: Week 2 - basic bash commands and GNU Coreutils
+subtitle: Week 2 - basic Linux concepts and bash
 bigimg: /img/turtle.jpg
 ---
 
