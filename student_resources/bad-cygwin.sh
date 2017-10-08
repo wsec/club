@@ -59,6 +59,9 @@ cat >> .bashrc << EOF
 #This is the bashrc file from gentoo linux.
 $(curl https://raw.githubusercontent.com/jennydaman/twlinux/master/student_resources/gentoo-bashrc)
 
+#add return status before bash prompt
+PS1='$(EXIT="$?"; [ "$EXIT" -ne "0" ] && echo "\[\e[31;1m\]$EXIT|")'$PS1
+
 #Here are the customizations specific to cygwin use in prog 3:
 
 alias npp="/cygdrive/c/Program\ Files\ \(x86\)/npp/notepad++.exe"
