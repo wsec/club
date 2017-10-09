@@ -5,22 +5,22 @@ subtitle: Week 2 - basic Linux concepts and bash
 bigimg: /img/turtle.jpg
 ---
 
-From Wikipedia: 
+From Wikipedia:
 > A shell is a user interface for access to an operating system's services.
 
-The most basic shell is `sh`. 
+The most basic shell is `sh`.
 
 `bash` is the most common shell for Linux. It has many more features and is easier to use than `sh`, and is nearly universal. There are other less common shells too, such as `fish` (Friendly Interactive SHell) and `zsh`.
 
 # bash features
 
-`*` represents a wild card. 
+`*` represents a wild card.
 
 `$VAR` represents a variable. bash variables are typeless. 
 
 Also know that `.` represents the current working directory, while `..` represents the parent directory.
 
-Here's a lengthy list of common commands: <https://github.com/jennydaman/twlinux/wiki/Basic-UNIX-and-bash-commands>
+Here's a [lengthy list of common commands](https://github.com/jennydaman/twlinux/wiki/Basic-UNIX-and-bash-commands).
 
 # Basic system administration
 
