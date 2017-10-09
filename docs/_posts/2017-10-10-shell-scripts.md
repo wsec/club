@@ -18,7 +18,9 @@ The most basic shell is `sh`.
 
 `$VAR` represents a variable. bash variables are typeless. 
 
-Also know that `.` represents the current working directory, while `..` represents the parent directory. 
+Also know that `.` represents the current working directory, while `..` represents the parent directory.
+
+Here's a lengthy list of common commands: <https://github.com/jennydaman/twlinux/wiki/Basic-UNIX-and-bash-commands>
 
 # Basic system administration
 
