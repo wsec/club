@@ -1,4 +1,4 @@
-#!/bin/bash 
+#!/bin/bash -e
 
 #written by Jennings Zhang, May 2017  
 #This script will make the cygwin linux terminal emulation program on school computers less frustrating to use. 
@@ -14,8 +14,8 @@
 #Repeated commands are not repeated in your history.
 #If a job exits with a non-zero return status, the return status is displayed at the end of the first line of the prompt in red.
 
-TODAY=$(date "+%m/%d/%Y")
-echo "Today is $TODAY"
+today=$(date "+%m/%d/%Y")
+echo "Today is $today"
 echo "This script will make cygwin on a school computer less frustrating to use. Written by Jennings Zhang, last updated October 2017."
 
 if [[ "$1" = *-h* ]]; then
@@ -42,11 +42,11 @@ sed -i "1iexport HOME=$new_home_esc\ncd ~" .bash_profile
 
 echo "Your new home (~) directory is: $new_home. Cygwin will now open in this directory by default." 
 
-ARRAY=(.bashrc .inputrc .profile)
+array=(.bashrc .inputrc .profile)
 
-cp -vi ${ARRAY[*]} $new_home
+cp -vi ${array[*]} $new_home
 
-echo "Copied ${ARRAY[*]} into $new_home."
+echo "Copied ${array[*]} into $new_home."
 cd $new_home
 
 #append scripts to .bashrc
@@ -54,7 +54,7 @@ cd $new_home
 #also add some useful functions and aliases
 cat >> .bashrc << EOF
 
-#<<<<<<< BEGIN added by bad-cygwin.sh on $TODAY
+#<<<<<<< BEGIN added by bad-cygwin.sh on $today
 
 #This is the bashrc file from gentoo linux.
 $(curl https://raw.githubusercontent.com/jennydaman/twlinux/master/student_resources/gentoo-bashrc)
@@ -93,7 +93,7 @@ hi CursorLine term=bold cterm=bold
 EOF
 
 #clean up, clean up, everybody everywhere
-unset TODAY new_home new_home_esc ARRAY
+unset today new_home new_home_esc array
 
 echo "Some lines were added to the $(tput bold)~/.bashrc$(tput sgr0) configuration file."
 echo "I've made some quality of life changes."
