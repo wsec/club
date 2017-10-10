@@ -1,0 +1,10 @@
+/* Kali Linux badge sticker hint? */
+
+td img {
+    max-height: 128px;
+    max-width: 256px;
+}
+
+thead tr th {
+    text-align: center;
+}
