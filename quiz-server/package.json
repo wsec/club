@@ -1,0 +1,17 @@
+{
+  "name": "quiz-server",
+  "version": "0.0.1",
+  "description": "Basic HTTP server, echoes POST requests to console",
+  "main": "server.js",
+  "scripts": {
+    "test": "node server.js"
+  },
+  "author": "Jennings Zhang",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "colors": "^1.1.2",
+    "express": "^4.16.2",
+    "ip": "^1.1.5"
+  }
+}
