@@ -640,7 +640,7 @@ footer .theme-by {
   border: 1px solid #0085a1;
   {% if site.hover-col %}
   background: {{ site.hover-col }};
-  border: {{ site.hover-col }};
+  border-color: {{ site.hover-col }};
   {% endif %}
 }
 
