@@ -10,10 +10,10 @@ baseurl: "/twlinux"
 # Of course don't forget to change the username and projectname to YOUR username and project
 
 # Name of website
-title: Linux Club 2017/2018
+title: Linux Club at Wootton HS
 
 # Short description of your site
-description: An advanced level IT club at Wootton HS
+description: 2017/2018 Systems, Software, and Security
 
 # --- Navigation bar options --- #
 
@@ -28,7 +28,7 @@ navbar-links:
     - Installing Software: "https://github.com/jennydaman/twlinux/wiki/Installing-software-on-Linux"
     - Solus Project: "https://solus-project.com/"
   LINUX commands: "https://github.com/jennydaman/twlinux/wiki/Basic-UNIX-and-bash-commands"
-  Achievements: "achievements"
+  Stickers: "stickers"
 
 # Image to show in the navigation bar - image must be a square (width = height)
 # Remove this parameter if you don't want an image in the navbar
