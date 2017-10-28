@@ -1,4 +1,4 @@
-# Wootton Linux (Systems/Software) Club 2017-2018
+# Wootton Linux Club 2017-2018
 
 This Github repository provides various resources for the club.
 
