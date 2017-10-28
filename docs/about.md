@@ -4,7 +4,7 @@ title: About
 subtitle: Linux Club - Systems, Software, Security
 ---
 
-Our club encourages the use of bleeding-edge open source software. We teach students the skills they need for a contemporary occupation in information technology.
+Our club encourages the use of bleeding-edge open source solutions. We teach students unique skills for them to excel in the field of information technology.
 
 Our current focus is on **penetration testing with [Kali Linux](https://www.kali.org/).**
 
