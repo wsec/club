@@ -15,7 +15,7 @@ You can win a unixsticker (or several) by being the first to complete these chal
 
 | Sticker | Description | Challenge (how to redeem) | Difficulty | Winner(s) |
 |---------|-------------|-----------|--------|
-| ![Arch Linux Badge Sticker](https://www.unixstickers.com/image/cache/data/stickers/archlinux/arch_sh-340x340.png) | Arch Linux badge sticker | First two to install Arch Linux and make it "usable": manages bootloader, can connect to the internet, has a normal user, at least one [AUR](https://aur.archlinux.org/) package. | **5/5** | no one |
+| ![Arch Linux Badge Sticker](https://www.unixstickers.com/image/cache/data/stickers/archlinux/arch_sh-340x340.png) | Arch Linux badge sticker | First to install Arch Linux and make it "usable": manages bootloader, can connect to the internet, has a normal user, at least one [AUR](https://aur.archlinux.org/) package. | **5/5** | no one |
 | ![Ubuntu Circle Keyboard Sticker](https://www.unixstickers.com/image/cache/data/stickers/ubuntu/circle_Ubuntu-orange-sh-340x340.png)| Ubuntu Circle keyboard stickers (x3) | Install any Debian based distro on your own computer. | **2/5** |        |
 | ![Bash sticker full logo](https://www.unixstickers.com/image/cache/data/stickers/binbash/Bash-logotype-new.sh-340x340.png) | Bash sticker full logo | Write a script that facilitates the ARP poison attack. | **5/5** |        |
 | ![rm -rf / shaped sticker](https://www.unixstickers.com/image/cache/data/stickers/shell/rm--rf.sh-340x340.png) | `rm -rf /` shaped sticker (0) | Week 3 "Linux Destruction" discussion | **1/5** | Simon |
