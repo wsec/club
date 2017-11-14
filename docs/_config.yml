@@ -26,7 +26,7 @@ navbar-links:
     - Arch Linux wiki: "https://wiki.archlinux.org/"
     - GNU free software: "https://www.gnu.org/philosophy/philosophy.html"
     - Windows Subsystem: "https://msdn.microsoft.com/en-us/commandline/wsl/install_guide"
-    - Installing Software: "https://github.com/jennydaman/twlinux/wiki/Installing-software-on-Linux"
+    - Installing Software: "https://github.com/jennydaman/twlinux/wiki/Installing-software-on-Linux-(Ubuntu)"
     - Solus Project: "https://solus-project.com/"
   LINUX commands: "https://github.com/jennydaman/twlinux/wiki/Basic-UNIX-and-bash-commands"
   Stickers: "stickers"
