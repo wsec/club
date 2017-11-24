@@ -26,4 +26,4 @@ Blog pages must be named "yyyy-mm-dd-FILENAME.md" (HTML is compatible but not re
 
 ## Licensing
 
-The Jekyll theme uses the MIT license. The terminal avatar image is from the [Numix Project](https://numixproject.org), licensed under GPL-3.0+. Contributions made by me belong to the public domain.
+[daattali/beautiful-jekyll](https://github.com/daattali/beautiful-jekyll) uses the [MIT license](https://github.com/daattali/beautiful-jekyll/blob/master/LICENSE). The [terminal](https://github.com/numixproject/numix-icon-theme-circle/blob/master/Numix-Circle/48/apps/terminal.svg) avatar image is from the [Numix Project](https://numixproject.org), licensed under [GPL-3.0+](https://github.com/numixproject/numix-icon-theme-circle/blob/master/LICENSE). Contributions made by me belong to the public domain.
