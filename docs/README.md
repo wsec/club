@@ -23,3 +23,7 @@ The best way to run a local development server is to use the Docker container. I
 Some ["safe" HTML tags](https://github.com/jch/html-pipeline/blob/master/lib/html/pipeline/sanitization_filter.rb#L40) are backwards compatable in a Markdown document.
 
 Blog pages must be named "yyyy-mm-dd-FILENAME.md" (HTML is compatible but not recommended). To use site templates, files that represent web pages must include [YAML front matter](https://github.com/daattali/beautiful-jekyll#last-important-thing-yaml-front-matter-parameters-for-a-page).
+
+## Licensing
+
+The Jekyll theme uses the MIT license. The terminal avatar image is from the [Numix Project](https://numixproject.org), licensed under GPL-3.0+. Contributions made by me belong to the public domain.
