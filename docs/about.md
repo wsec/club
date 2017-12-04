@@ -6,7 +6,7 @@ subtitle: Linux Club - Systems, Software, Security
 
 Our club encourages the use of bleeding-edge open source solutions. We teach students unique skills for them to excel in the field of information technology.
 
-Our current focus is on **penetration testing with [Kali Linux](https://www.kali.org/).**
+Our current focus is on **penetration testing with [Parrot Security OS](https://parrotsec.org/).**
 
 **Founder**: Jennings Zhang
 
