@@ -21,9 +21,7 @@ description: 2017/2018 Systems, Software, Security
 navbar-links:
   About: "about"
   Resources:
-    - oh-my-zsh: "https://github.com/robbyrussell/oh-my-zsh"
     - Arch Linux wiki: "https://wiki.archlinux.org/"
-    - GNU free software: "https://www.gnu.org/philosophy/philosophy.html"
     - Windows Subsystem: "https://msdn.microsoft.com/en-us/commandline/wsl/install_guide"
     - Installing Software: "https://github.com/jennydaman/twlinux/wiki/Installing-software-on-Linux-(Ubuntu)"
     - Solus Project: "https://solus-project.com/"
