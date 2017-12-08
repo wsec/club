@@ -43,4 +43,4 @@ Decryption is infeasible, to attack SSL/TLS we should force unencrypted connecti
 
 Big sites use HSTS (HTTP Strict Transport Security) which can get pesky. We can try to get around it.
 
-<https://github.com/jennydaman/twlinux/wiki/MitM-Framework>
+<https://github.com/jennydaman/twlinux/wiki/sslstrip#mitm-framework>
