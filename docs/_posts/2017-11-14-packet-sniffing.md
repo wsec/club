@@ -4,7 +4,7 @@ title: Packet Sniffing
 subtitle: Week 7-9 - attacking internet connections
 ---
 
-# Alphabet Soup
+## Alphabet Soup
 
 **TCP/IP** *(Transmission Control Protocol/Internet Protocol)*: a suite of communication protocols used to interconnect network devices on the internet.
 
@@ -12,7 +12,7 @@ subtitle: Week 7-9 - attacking internet connections
 
 **HTML** *(Hypertext Markup Language)*: describes the content of a webpage.
 
-# Tracing HTTP Connections to the Internet
+## Tracing HTTP Connections to the Internet
 
 To compromise network traffic going outside the LAN, we must intercept traffic between the client and the router.
 
@@ -29,9 +29,9 @@ Packets have a destination IP address of the router's **default gateway** when h
 - Form data.
 - Cookies (use the session ID to impersonate the victim)
 
-<https://github.com/jennydaman/twlinux/wiki/Spying-on-HTTP-using-Wireshark>
+<https://github.com/jennydaman/twlinux/wiki/Wireshark>
 
-# Week 9: password theft from SSL/TLS connections
+## Week 9: password theft from SSL/TLS connections
 
 HTTP is being phased out, however about 40% of internet traffic remains unencrypted.
 
