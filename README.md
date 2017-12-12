@@ -4,7 +4,7 @@
 
 [![license](https://img.shields.io/github/license/jennydaman/twlinux.svg)](https://github.com/jennydaman/twlinux/blob/master/UNLICENSE)
 
-This Github repository provides various resources for the club.
+This Github repository provides various resources for the club, including the wiki and a few scripts.
 
 **Founder**: Jennings Zhang
 
