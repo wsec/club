@@ -1,4 +1,6 @@
-# Wootton Linux Club 2017-2018
+# Wootton Red Team 2017-2018
+
+(originally Linux Systems Club)
 
 *Systems, software, security.*
 
@@ -6,12 +8,6 @@
 
 This Github repository provides various resources for the club, including the wiki and a few scripts.
 
-**Founder**: Jennings Zhang
-
-**Teacher Sponsor**: Mr. Erin Marshall
-
-**Room**: 15 networking lab (next to the cafeteria)
-
-We meet **every Tuesday after-school from 14:40 to 15:30**.
+For more information, visit this link: https://twlinux.github.io/about
 
 *DFTBA.*
