@@ -1,25 +1,17 @@
 #!/bin/bash -e
 
-#written by Jennings Zhang, May 2017  
-#This script will make the cygwin linux terminal emulation program on school computers less frustrating to use. 
-#Usage: ./bad-cygwin.sh [NEW_HOME_DIR]
-#WARNING: this script was kinda inflexible... This software is provided AS IS, don't blame me for any catastrophies or vomitting.
-#version 0.4
+# written by Jennings Zhang, updated for May 2018
+# Usage: ./bad-cygwin.sh [NEW_HOME_DIR]
+# This software is provided AS IS, don't blame me for any catastrophies or vomitting.
+# soruce: https://github.com/twlinux/club/blob/master/student_resources/bad-cygwin.sh
 
-#Features overview: 
-#launch notepad++ from cygwin simply by typing "npp &".
-#instantly create a new hello world C file by typing "createc".
-#"ls" is colorful.
-#your home directory (the default directory cygwin opens in) will be changed to H:\cygwin_home. This folder is accessible with Windows file explorer, making your life much easier. 
-#Repeated commands are not repeated in your history.
-#If a job exits with a non-zero return status, the return status is displayed at the end of the first line of the prompt in red.
+# This script will configure cygwin on school computers.
+# Targets ONLY Windows 10 computers in technology labs at wootton. Don't use this anywhere else.
 
 today=$(date "+%m/%d/%Y")
-echo "Today is $today"
-echo "This script will make cygwin on a school computer less frustrating to use. Written by Jennings Zhang, last updated October 2017."
+echo "Last updated: 50/09/2018. Today is $today"
 
 if [[ "$1" = *-h* ]]; then
-  
   echo "Usage: ./bad-cygwin.sh [NEW_HOME_DIR]"
   exit 0
 fi
@@ -31,58 +23,69 @@ cp -v .bash_profile .bash_profile.backup
 new_home="/cygdrive/h/cygwin_home"
 new_home_esc="\/cygdrive\/h\/cygwin_home\/"
 
-#in case a specific new home directory was specified by $1
+# in case a specific new home directory was specified by $1
 if [ -n "$1" ]; then
-  $new_home=$1
+  new_home=$1
   new_home_esc=$(echo $new_home | sed 's/\//\\\//g')
 fi
 
 mkdir $new_home
 sed -i "1iexport HOME=$new_home_esc\ncd ~" .bash_profile
 
-echo "Your new home (~) directory is: $new_home. Cygwin will now open in this directory by default." 
 
 array=(.bashrc .inputrc .profile)
 
 cp -vi ${array[*]} $new_home
 
-echo "Copied ${array[*]} into $new_home."
+echo "Copied ${array[*]} into $new_home." 1>&2
 cd $new_home
 
-#append scripts to .bashrc
-#retrive gentoo-bashrc from Github repository
-#also add some useful functions and aliases
 cat >> .bashrc << EOF
 
-#<<<<<<< BEGIN added by bad-cygwin.sh on $today
+#<<<<<<< BEGIN added by bad-cygwin.sh on 05/09/2018
 
-#This is the bashrc file from gentoo linux.
-$(curl https://raw.githubusercontent.com/jennydaman/twlinux/master/student_resources/gentoo-bashrc)
+# stuff from gentoo linux
 
-#add return status before bash prompt
-PS1='$(EXIT="$?"; [ "$EXIT" -ne "0" ] && echo "\[\e[31;1m\]$EXIT|")'$PS1
+# Bash won't get SIGWINCH if another process is in the foreground.
+# Enable checkwinsize so that bash will check the terminal size when
+# it regains control.  #65623
+# http://cnswww.cns.cwru.edu/~chet/bash/FAQ (E11)
+shopt -s checkwinsize
+
+# Disable completion when the input buffer is empty.  i.e. Hitting tab
+# and waiting a long time for bash to expand all of $PATH.
+shopt -s no_empty_cmd_completion
+
+# Enable history appending instead of overwriting when exiting.  #139609
+shopt -s histappend
+
+alias ls='ls --color=auto'
+alias grep='grep --colour=auto'
+alias egrep='egrep --colour=auto'
+alias fgrep='fgrep --colour=auto'
+
+PS1='\$(EXIT="\$?"; [ "\$EXIT" -ne "0" ] && echo "\[\e[31;1m\]\$EXIT|")\[\033]0;\u@\h:\w\007\]\[\033[01;32m\]\u@\h\[\033[01;34m\] \w \\$\[\033[00m\] '
 
 #Here are the customizations specific to cygwin use in prog 3:
 
 alias npp="/cygdrive/c/Program\ Files\ \(x86\)/npp/notepad++.exe"
 
-createc() {
+
+cboiler() {
   local file_name=hello_world.c
-  [ -n "$1" ] && file_name=$1
-  cat > $file_name << ENDOFHELLOWORLD
+  [ -n "\$1" ] && file_name=\$1
+  cat > \$file_name << ENDOFHELLOWORLD
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-
 int main(int argc, char *argv[]) {
-
 	printf("Hello world!");
 	return 0;
 }
 ENDOFHELLOWORLD
 }
-
 #>>>>>>> END added by bad-cygwin.sh
+
 EOF
 
 cat >> .virc << EOF
@@ -92,14 +95,12 @@ set cursorline
 hi CursorLine term=bold cterm=bold 
 EOF
 
-#clean up, clean up, everybody everywhere
-unset today new_home new_home_esc array
+echo "The script was probably successful."
+echo "Your home directory (the default directory cygwin opens in, represented by ~) is set to $(tput bold)H:\cygwin_home$(tput sgr0) (/cygdrive/h/cygwin_home). This folder is accessible with Windows file explorer in $(tput bold)My Documents$(tput sgr0)."
+echo "Some additional configurations have been appended to ~/.bashrc. For example, the ls command should be colorful. The default prompt PS1 has also been improved. Any non-zero exit code will appear before your prompt."
+echo "You can try these new commands:"
+echo 'cboiler [FILENAME] will create a "Hello World" in C.'
+echo "$(tput bold)npp [FILENAME] &$(tput sgr0) will launch notepad++ directly from cygwin."
 
-echo "Some lines were added to the $(tput bold)~/.bashrc$(tput sgr0) configuration file."
-echo "I've made some quality of life changes."
-echo 'createc [FILENAME] will write "Hello World" out to the specified file.'
-echo '$(tput bold)npp [FILENAME] &$(tput sgr0) will launch notepad++ directly from cygwin.'
-
-echo "Done! Please $(tput bold)restart cygwin$(tput sgr0) to finish applying the changes. "
-echo "If you want to revert these changes, delete the cygwin_home folder, then: cd /home/\$USER && mv .bash_profile.backup .bash_profile"
-echo "DFTBA"
+echo "To revert these changes, delete the cygwin_home folder, then: cd /home/\$USER && mv .bash_profile.backup .bash_profile"
+echo "You must $(tput bold)restart cygwin$(tput sgr0) to finish setup. Type $(tput bold)exit$(tput sgr0)."
