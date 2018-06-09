@@ -4,6 +4,6 @@
 
 This Github repository provides various resources for the club, including the wiki and a few scripts.
 
-For more information, visit this link: https://wsec.github.io/about
+For more information, visit this link: https://wsec.gitlab.io/about
 
 *DFTBA.*
