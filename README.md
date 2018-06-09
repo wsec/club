@@ -1,13 +1,9 @@
-# Wootton Red Team 2017-2018
+# Wootton Cybersecurity Club 2018-2019
 
-(originally Linux Systems Club)
-
-*Systems, software, security.*
-
-[![license](https://img.shields.io/github/license/jennydaman/twlinux.svg)](https://github.com/jennydaman/twlinux/blob/master/UNLICENSE)
+[![license](https://img.shields.io/github/license/jennydaman/twlinux.svg)](https://github.com/wsec/club/blob/master/UNLICENSE)
 
 This Github repository provides various resources for the club, including the wiki and a few scripts.
 
-For more information, visit this link: https://twlinux.github.io/about
+For more information, visit this link: https://wsec.github.io/about
 
 *DFTBA.*
